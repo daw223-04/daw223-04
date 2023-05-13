@@ -15,18 +15,18 @@
 
 <h3>Anexo I: Consideraciones previas</h3>
 
-Antes de comenzar con el manual de instalación, cabe destacar que todo el proyecto se ha desarrollado y probado con las siguientes versiones de los programas:
+<p>Antes de comenzar con el manual de instalación, cabe destacar que todo el proyecto se ha desarrollado y probado con las siguientes versiones de los programas:</p>
 <ul>
 	<li>Sistema operativo usado: Debian 11.5</li>
 	<li>Versión de Docker: 20.10.19</li>
 	<li>Versión de docker-compose: 2.16.0</li>
 	<li>Versión de Git: 2.30.2</li>
 </ul>
-No se asegura su funcionamiento con versiones diferentes de estos.
+<p>No se asegura su funcionamiento con versiones diferentes de estos.</p>
 
 <h3>Anexo II: Instalación y configuración de Docker y Git</h3>
 
-Primero, es necesario tener instalado y configurado, en el servidor donde se quiera hacer el despliegue de la aplicación, las siguientes aplicaciones:
+<p>Primero, es necesario tener instalado y configurado, en el servidor donde se quiera hacer el despliegue de la aplicación, las siguientes aplicaciones:</p>
 <ul>
 	<li>Docker, con docker-compose habilitado. A continuación, se muestran los comandos para la instalación de ambos en Debian 11.5:
 	<ul>
@@ -62,41 +62,43 @@ Primero, es necesario tener instalado y configurado, en el servidor donde se qui
 
 <h3>Anexo III: Clonado del repositorio de GitHub</h3>
 
-Tras instalar y configurar Docker y GIt, se debe clonar el repositorio en el servidor, usando el siguiente comando en la consola de Git:
+<p>Tras instalar y configurar Docker y GIt, se debe clonar el repositorio en el servidor, usando el siguiente comando en la consola de Git:</p>
 <ul>
 	<li>~$ git clone https://github.com/daw223_04/daw223-04.git</li>
 </ul>
 
 <h3>Anexo IV: Aplicación de las variables de entorno correctas</h3>
 
-Una vez se tenga el repositorio clonado, se debe modificar una variable de entorno, la cual esta puesta en el fichero variables_servidor_web.env, y tiene el nombre de ip_pub, la cual permite indicar, al código de la aplicación, cual es la dirección IP del servidor donde se lanza.
-Entonces, lo que se debe hacer es cambiar el valor de la variable ip_pub por la dirección IP del servidor donde se crearán los contenedores.
+<p>Una vez se tenga el repositorio clonado, se debe modificar una variable de entorno, la cual esta puesta en el fichero variables_servidor_web.env, y tiene el nombre de ip_pub, la cual permite indicar, al código de la aplicación, cual es la dirección IP del servidor donde se lanza.</p>
+<p>Entonces, lo que se debe hacer es cambiar el valor de la variable ip_pub por la dirección IP del servidor donde se crearán los contenedores.</p>
 
 <h3>Anexo V: Creación de los contenedores</h3>
 
-Cuando ya se haya cambiado el valor de la variable de entorno indicada, se podrán crear los contenedores.
-Para ello, simplemente se debe ir a la raiz de nuestro repositorio clonado, y ejecutar uno de los siguientes comandos:
+<p>Cuando ya se haya cambiado el valor de la variable de entorno indicada, se podrán crear los contenedores.</p>
+<p>Para ello, simplemente se debe ir a la raiz de nuestro repositorio clonado, y ejecutar uno de los siguientes comandos:</p>
 <ul>
 	<li>~$ docker compose up -d</li>
 	<li>~$ docker-compose up -d</li>
 </ul>
-Ambos comandos son muy parecidos, diferenciandose en tener un guión o un espacio entre las palabras docker y compose, pero, dependiendo de la versión que se instale de Docker, funcionará uno u otro comando. Por eso, se indican ambas posibilidades.
-Con este comando, se descargarán las imagenes necesarias de DockerHub y se crearán los contenedores necesarios para desplegar la aplicación.
+
+<p>Ambos comandos son muy parecidos, diferenciandose en tener un guión o un espacio entre las palabras docker y compose, pero, dependiendo de la versión que se instale de Docker, funcionará uno u otro comando. Por eso, se indican ambas posibilidades.</p>
+<p>Con este comando, se descargarán las imagenes necesarias de DockerHub y se crearán los contenedores necesarios para desplegar la aplicación.</p>
 
 <h3>Anexo VI: Acceso a la aplicación</h3>
 
-Una vez se haya acabado la creación de los contenedores, se podrá acceder a la siguiente ruta via web para usar la aplicación:
+<p>Una vez se haya acabado la creación de los contenedores, se podrá acceder a la siguiente ruta via web para usar la aplicación:</p>
 <ul>
 	<li>http://IP</li>
 </ul>
-Así mismo, también se podrá acceder a un gestor gráfico de la B.D., por si se necesita hacer alguna operación en ella. La ruta de acceso y credenciales son:
+
+<p>Así mismo, también se podrá acceder a un gestor gráfico de la B.D., por si se necesita hacer alguna operación en ella. La ruta de acceso y credenciales son:</p>
 <ul>
 	<li>http://IP:8080</li>
 	<li>Usuario: root</li>
 	<li>Contraseña: admin</li>
 </ul>
 
-Con esto, ya se tendrá la aplicación desplegada y lista para usarse.
+<p>Con esto, ya se tendrá la aplicación desplegada y lista para usarse.</p>
 
 <h2>Fuentes consultadas para el manual de instalación</h2>
 
