@@ -1,0 +1,78 @@
+/*Estilos aplicados a la barra superior de la página*/
+body > header > nav{
+    background-color: #1562B2;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+/*Estilos aplicados al texto 'CV-FÁCIL' de la cabecera y del icono de usuario*/
+body > header > nav > h2, .bi-person::before{
+    font-size: 2em;
+}
+
+/*Estilos aplicados al enlace del texto 'CV-FÁCIL' de la cabecera y al icono de usuario*/
+body > header > nav > h2 > a, .bi-person::before{
+    color: white;
+}
+
+/*Estilos aplicados al enlace del texto 'CV-FÁCIL' y a los enlaces de 'Ver curriculums creados' y de 'Gestionar cuenta'
+    del cuadro de inicio de sesión*/
+body > header > nav > h2 > a, #enlaceListadoCurriculums, #enlaceGestionCuenta{
+    text-decoration: none;
+}
+
+/*Estilos aplicados a la imagen del usuario*/
+.bi-person{
+    text-align: right;
+}
+
+/*Estilos aplicados al cuadro de inicio de sesión*/
+#cuadroIniciaSesion{
+    background-color: white;
+    border: 1px solid black;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    float: right;
+    display: none;
+}
+
+/*Estilos aplicados al texto y al botón del cuadro de inicio de sesión*/
+#textoCuadroIniciaSesion, #botonCuadroIniciaSesion{
+    width: 230px;
+}
+
+/*Estilos aplicados al texto y a los enlaces de 'Ver curriculums creados' y de 'Gestionar cuenta' del cuadro de inicio de sesión*/
+#textoCuadroIniciaSesion, #enlaceListadoCurriculums, #enlaceGestionCuenta{
+    font-size: 1.3em;
+}
+
+/*Estilos aplicados al texto del cuadro de inicio de sesión*/
+#textoCuadroIniciaSesion{
+    text-align: justify;
+}
+
+/*Estilos aplicados al botón y a los enlaces de 'Ver curriculums creados' y de 'Gestionar cuenta' del cuadro de 
+    inicio de sesión*/
+#botonCuadroIniciaSesion, #enlaceListadoCurriculums, #enlaceGestionCuenta{
+    display: block;
+}
+
+/*Estilos aplicados a los enlaces de 'Ver curriculums creados' y de 'Gestionar cuenta' del cuadro de inicio de sesión*/
+#enlaceListadoCurriculums, #enlaceGestionCuenta{
+    align-self: center;
+}
+
+/*Estilos aplicados al enlace de 'Ver curriculums creados'del cuadro de inicio de sesión*/
+#enlaceListadoCurriculums{
+    color: #5B91C9;
+}
+
+/*Estilos aplicados al enlace de 'Gestionar cuenta' del cuadro de inicio de sesión*/
+#enlaceGestionCuenta{
+    color: #53CBA4;
+}

@@ -1,0 +1,21 @@
+/*Estilos aplicados a la parte principal de la página*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Estilos aplicados al título de la parte principal de la página*/
+main > h2{
+    max-width: 600px;
+    font-size: 4em;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/*Estilos aplicados al enlace que actúa de botón de la parte principal de la página*/
+main > a{
+    padding: 10px 30px !important;
+    font-size: 2.5em !important;
+}

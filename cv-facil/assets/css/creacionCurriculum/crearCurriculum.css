@@ -1,0 +1,440 @@
+/*Estilos aplicados a las cabeceras de los cuadros de añadir y al mensaje de error de los cuadros de añadir*/
+.cuadroAnadirDatosNoPersonales > header, .mensajeError{
+    text-align: center;
+}
+
+/*Estilos aplicados a las secciones de los datos del curriculum y a los cuadros de añadir*/
+.cuadroCurriculum, .cuadroAnadirDatosNoPersonales{
+    padding: 15px;
+}
+
+/*Estilos aplicados al texto de 'Campos obligatorios', a los label de la página, al artículo que contiene los botones 
+    de los cuadros de añadir y a la sección que contiene al botón de 'Continuar'*/
+main > p, label, .articuloBotonesCuadroAnadir, #seccionBotonEnvio{
+    text-align: right;
+}
+
+/*Estilos aplicados al texto de 'Campos obligatorios', a los label e input de la sección de datos personales, al botón de 'Seleccionar foto',
+    al artículo que contiene el enlace para mostrar los cuadros de añadir, a los datos no personales añadidos, a los botones de 'Descartar cambios'
+    y de 'Añadir elementos' y al mensaje de error de los cuadros de añadir*/
+main > p, #cuadroDatosPersonales label, #cuadroDatosPersonales input, #botonInputFotoCurriculum, .articuloEnlaceDatosNoPersonales,
+.elementoAnadido p, .btnDescartaCambios, .btnAnadeElemento, .mensajeError{
+    font-size: 1.2em !important;
+}
+
+/*Estilos aplicados al texto de 'Campos obligatorios'*/
+main > p{
+    margin-right: 20px;
+}
+
+/*Estilos aplicados al input de la foto, a los cuadros de añadir, al cuadro de 'Descartar cambios' y al mensaje de error de los cuadros de añadir*/
+#inputFotoCurriculum, .cuadroAnadirDatosNoPersonales, .btnDescartaCambios, .mensajeError{
+    display: none;
+}
+
+/*Estilos aplicados a las secciones de los datos del curriculum y a los cuadros de añadir*/
+.cuadroCurriculum, .cuadroAnadirDatosNoPersonales{
+    border: 1px solid grey;
+    background-color: white;
+}
+
+/*Estilos aplicados a las secciones de los datos del curriculum y a la sección que contiene al botón de 'Continuar'*/
+.cuadroCurriculum, #seccionBotonEnvio{
+    margin: 20px;
+}
+
+/*Estilos aplicados a la seccion de datos personales y a todos sus artículos, menos al de la foto, además de a los artículos de los 
+    cuadros de añadir y al artículo de los botones de modificación y borrado*/
+#gridDatosPersonales, #articuloNombre, #articuloApellidos, #articuloTelefono, #articuloFechaNac, #articuloCorreo,
+#articuloWhatsapp, #articuloLinkedIn, #articuloDireccion, .filaDosDatosCuadroAnadir, .filaTresDatosCuadroAnadir, 
+.elementoAnadido > article:last-child{
+    display: grid;
+    gap: 10px;
+}
+
+/*Estilos aplicados a la seccion de datos personales y a todos sus artículos, además de a los artículos de los cuadros de añadir*/
+#gridDatosPersonales, #articuloFoto, #articuloNombre, #articuloApellidos, #articuloTelefono, #articuloFechaNac, #articuloCorreo,
+#articuloWhatsapp, #articuloLinkedIn, #articuloDireccion, .filaDosDatosCuadroAnadir, .filaTresDatosCuadroAnadir{
+    align-items: center;
+}
+
+/*Estilos aplicados a la sección de datos personales*/
+#gridDatosPersonales{
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+/*Estilos aplicados a las secciones de los datos del curriculum, al artículo de la foto del curriculum 
+    y al artículo de '+ Agregar' en los artículos de estudios, experiencia, idiomas y datos de interés*/
+.cuadroCurriculum > header, #fotoCurriculum, .articuloEnlaceDatosNoPersonales{
+    padding-bottom: 10px;
+}
+
+/*Estilos aplicados a la cabecera de las secciones de los datos del curriculum*/
+.cuadroCurriculum > header{
+    font-size: 1.6em;
+}
+
+/*Estilos aplicados al artículo de la foto del curriculum y a los elementos añadidos en las secciones de estudios, experiencia, 
+    idiomas y datos de interés*/
+#articuloFoto, .elementoAnadido{
+    display: flex;
+}
+
+/*Estilos aplicados al artículo de la foto del currículum*/
+#articuloFoto{
+    grid-row: 1 / 7;
+    grid-column: 1 / 2;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+/*Estilos aplicados a la foto del currículum*/
+#fotoCurriculum{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+/*Estilos aplicados al botón de 'Seleccionar foto'*/
+#botonInputFotoCurriculum{
+    padding: 2px 10px;
+}
+
+/*Estilos aplicados a todos los artículos de la sección de datos personales, menos al de la foto*/
+#articuloNombre, #articuloApellidos, #articuloTelefono, #articuloFechaNac, #articuloCorreo,
+#articuloWhatsapp, #articuloLinkedIn, #articuloDireccion, #articuloNombre{
+    grid-template-columns: 125px 1fr;
+}
+
+/*Estilos aplicados a los artículos del nombre y de los apellidos de la sección de datos personales*/
+#articuloNombre, #articuloApellidos{
+    grid-row: 1 / 2;
+}
+
+/*Estilos aplicados a los artículos del nombre y del teléfono de la sección de datos personales*/
+#articuloNombre, #articuloTelefono{
+    grid-column: 2 / 3;
+}
+
+/*Estilos aplicados a los artículos de los apellidos y de la fecha de nacimiento de la sección de datos personales*/
+#articuloApellidos, #articuloFechaNac{
+    grid-column: 3 / 4;
+}
+
+/*Estilos aplicados a los artículos del teléfono y de la fecha de nacimiento de la sección de datos personales*/
+#articuloTelefono, #articuloFechaNac{
+    grid-row: 2 / 3;
+}
+
+/*Estilos aplicados a los artículos del correo, de Whatsapp, de LinkedIn y de direccion de la sección de datos personales*/
+#articuloCorreo, #articuloWhatsapp, #articuloLinkedIn, #articuloDireccion{
+    grid-column: 2 / 4;
+}
+
+/*Estilos aplicados a los artículos del direccion de la sección de datos personales*/
+#articuloDireccion{
+    grid-row: 3 / 4;
+}
+
+/*Estilos aplicados a los artículos del correo de la sección de datos personales*/
+#articuloCorreo{
+    grid-row: 4 / 5;
+}
+
+/*Estilos aplicados a los artículos del Whatsapp de la sección de datos personales*/
+#articuloWhatsapp{
+    grid-row: 5 / 6;
+}
+
+/*Estilos aplicados a los artículos del LinkedIn de la sección de datos personales*/
+#articuloLinkedIn{
+    grid-row: 6 / 7;
+}
+
+/*Estilos aplicados al cuadro de añadir, a la cabecera del artículo de los estudios, experiencia, idiomas 
+    y datos de interés añadidos y al botón de 'Continuar'*/
+.cuadroAnadirDatosNoPersonales > header, .datosNoPersonalesAnadidos > header, #seccionBotonEnvio > input{
+    font-size: 1.4em;
+}
+
+/*Estilos aplicados a la cabecera de los cuadros de añadir, a la cabecera del artículo de los estudios, experiencia, idiomas y 
+    datos de interés añadidos, a la línea que aparece antes de cada uno de los datos añadidos, a los artículos del cuadro
+    de añadir y al mensaje de error de los cuadros de añadir*/
+.cuadroAnadirDatosNoPersonales > header, .datosNoPersonalesAnadidos > header, .datosNoPersonalesAnadidos > hr, 
+.filaDosDatosCuadroAnadir, .filaTresDatosCuadroAnadir, .mensajeError{
+    margin-bottom: 10px;
+}
+
+/*Estilos aplicados a los label e input de los cuadros de añadir, al botón de 'Actualidad' y al cuadro de texto del cuadro
+    de añadir datos de interés*/
+.cuadroAnadirDatosNoPersonales label, .cuadroAnadirDatosNoPersonales input, .btnActualidad, textarea{
+    font-size: 1.1em;
+}
+
+/*Estilos aplicados a la línea que aparece antes de cada uno de los datos añadidos*/
+.datosNoPersonalesAnadidos > hr{
+    background-color: grey;
+}
+
+/*Estilos aplicados a los artículos que contienen los datos añadidos*/
+.elementoAnadido{
+    justify-content: space-between;
+    align-items: start;
+}
+
+/*Estilos aplicados a las imágenes de modificación y borrado*/
+.elementoAnadido img{
+    width: 35px;
+    height: 35px;
+}
+
+/*Estilos aplicados a los 2 primeros parrafos de cada uno de los datos añadidos y al cuadro de añadir*/
+.elementoAnadido p:first-child, .elementoAnadido p:nth-child(2), .cuadroAnadirDatosNoPersonales{
+    margin-bottom: 15px;
+}
+
+/*Estilos aplicados al 1º parrafo de cada uno de los estudios, experiencia o idiomas añadidos*/
+.estudioAnadido .tituloElemento, .experienciaAnadido .tituloElemento, .idiomaAnadido .tituloElemento{
+    font-weight: bolder;
+}
+
+/*Estilos aplicados a los artículos de titulo/puesto, centro y fecha de inicio de los cuadros de añadir*/
+.filaDosDatosCuadroAnadir{
+    grid-template-columns: 240px 1fr;
+}
+
+/*Estilos aplicados al artículo de fecha de fin de los cuadros de añadir*/
+.filaTresDatosCuadroAnadir{
+    grid-template-columns: 240px 1fr 130px;
+}
+
+/*Estilos aplicados al botón de 'Añádir' de los cuadros de añadir*/
+.btnAnadeElemento{
+    margin-left: 20px;
+}
+
+/*Estilos aplicados a los botones de 'Añadir' y al 'Descartar cambios' de los cuadros de añadir, del botón de añadir datos, a la línea que aparece 
+    antes de cada uno de los datos añadidos y al cuadro de texto de añadir datos de interés*/
+.btnDescartaCambios, .btnAnadeElemento, hr, textarea{
+    margin-top: 10px;
+}
+
+/*Estilos aplicados a los enlaces de '+ Agregar...' y a los label de la página*/
+.enlaceAnadirDatosNoPersonales, label{
+    display: inline-block;
+}
+
+/*Estilos aplicados al cuadro de texto del cuadro de añadir datos de interés*/
+textarea{
+    display: block;
+    width: 100%;
+    height: 150px;
+}
+
+/*Estilos aplicados al artículo que contiene el texto de los datos de interés añadidos*/
+#articuloDatosAnadidos .elementoAnadido > article:first-child{
+    max-width: 70%;
+}
+
+/*Estilos aplicados al artículo de los botones de modificación y borrado*/
+.elementoAnadido > article:last-child{
+    grid-template-columns: 1fr 1fr;
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 1070px*/
+@media screen and (max-width: 1070px){
+
+    /*Estilos aplicados a la sección de datos personales*/
+    #gridDatosPersonales{
+        grid-template-columns: 200px 3fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    /*Estilos aplicados al artículo de la foto de la sección de datos personales*/
+    #articuloFoto{
+        grid-row: 1 / 9;
+        grid-column: 1 / 2;
+    }
+
+    /*Estilos aplicados al artículo del nombre de la sección de datos personales*/
+    #articuloNombre{
+        grid-row: 1 / 2;
+    }
+
+    /*Estilos aplicados al artículo de los apellidos de la sección de datos personales*/
+    #articuloApellidos{
+        grid-row: 2 / 3;
+    }
+
+    /*Estilos aplicados al artículo del telefono de la sección de datos personales*/
+    #articuloTelefono{
+        grid-row: 3 / 4;
+    }
+
+    /*Estilos aplicados al artículo de la fecha de nacimiento de la sección de datos personales*/
+    #articuloFechaNac{
+        grid-row: 4 / 5;
+    }
+
+    /*Estilos aplicados al artículo del direccion de la sección de datos personales*/
+    #articuloDireccion{
+        grid-row: 5 / 6;
+    }
+
+    /*Estilos aplicados al artículo del correo de la sección de datos personales*/
+    #articuloCorreo{
+        grid-row: 6 / 7;
+    }
+
+    /*Estilos aplicados al artículo del Whatsapp de la sección de datos personales*/
+    #articuloWhatsapp{
+        grid-row: 7 / 8;
+    }
+
+    /*Estilos aplicados al artículo del LinkedIn de la sección de datos personales*/
+    #articuloLinkedIn{
+        grid-row: 8 / 9;
+    }
+
+    /*Estilos aplicados a todos los artículos de la sección de datos personales, menos al de la foto*/
+    #articuloNombre, #articuloTelefono, #articuloApellidos, #articuloFechaNac, #articuloCorreo, #articuloWhatsapp, 
+    #articuloLinkedIn, #articuloDireccion{
+        grid-column: 2 / 3;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 1000px*/
+@media screen and (max-width: 1000px){
+
+    /*Estilos aplicados a los artículos de titulo, centro y fecha de inicio de los cuadros de añadir*/
+    .filaDosDatosCuadroAnadir{
+        grid-template-columns: 1fr;
+    }
+
+    /*Estilos aplicados a todos los label de los cuadros de añadir*/
+    .filaDosDatosCuadroAnadir > label, .filaTresDatosCuadroAnadir > label{
+        text-align: left;
+    }
+
+    /*Estilos aplicados al artículo de fecha de fin de los cuadros de añadir*/
+    .filaTresDatosCuadroAnadir{
+        grid-template-columns: 1fr 130px;
+    }
+
+    /*Estilos aplicados al label de fecha de fin de los cuadros de añadir*/
+    .filaTresDatosCuadroAnadir > label{
+        grid-column: 1 / 3;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 870px*/
+@media screen and (max-width: 870px){
+
+    /*Estilos aplicados a la sección de datos personales*/
+    #gridDatosPersonales{
+        grid-template-columns: 1fr;
+        grid-template-rows: 190px 1fr;
+        gap: 15px;
+    }
+
+    /*Estilos aplicados al artículo de la foto de la sección de datos personales*/
+    #articuloFoto{
+        grid-row: 1 / 2;
+    }
+
+    /*Estilos aplicados al artículo del nombre de la sección de datos personales*/
+    #articuloNombre{
+        grid-row: 2 / 3;
+    }
+
+    /*Estilos aplicados al artículo de los apellidos de la sección de datos personales*/
+    #articuloApellidos{
+        grid-row: 3 / 4;
+    }
+
+    /*Estilos aplicados al artículo del telefono de la sección de datos personales*/
+    #articuloTelefono{
+        grid-row: 4 / 5;
+    }
+
+    /*Estilos aplicados al artículo de la fecha de nacimiento de la sección de datos personales*/
+    #articuloFechaNac{
+        grid-row: 5 / 6;
+    }
+
+    /*Estilos aplicados al artículo del direccion de la sección de datos personales*/
+    #articuloDireccion{
+        grid-row: 6 / 7;
+    }
+
+    /*Estilos aplicados al artículo del correo de la sección de datos personales*/
+    #articuloCorreo{
+        grid-row: 7 / 8;
+    }
+
+    /*Estilos aplicados al artículo del Whatsapp de la sección de datos personales*/
+    #articuloWhatsapp{
+        grid-row: 8 / 9;
+    }
+
+    /*Estilos aplicados al artículo del LinkedIn de la sección de datos personales*/
+    #articuloLinkedIn{
+        grid-row: 9 / 10;
+    }
+
+    /*Estilos aplicados a todos los artículos de la sección de datos personales, menos al de la foto*/
+    #articuloNombre, #articuloTelefono, #articuloApellidos, #articuloFechaNac, #articuloCorreo, #articuloWhatsapp, 
+    #articuloLinkedIn, #articuloDireccion{
+        grid-column: 1 / 2;
+    }
+
+    /*Estilos aplicados a la foto de la sección de datos personales*/
+    #fotoCurriculum{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 700px*/
+@media screen and (max-width: 700px){
+
+    /*Estilos aplicados a los botones de modificar y borrar estudios, experiencia, idiomas o datos de interés*/
+    .elementoAnadido img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 600px*/
+@media screen and (max-width: 600px){
+
+    /*Estilos aplicados a todos los artículos de la sección de datos personales, menos al de la foto*/
+    #articuloNombre, #articuloApellidos, #articuloTelefono, #articuloFechaNac, #articuloCorreo,
+    #articuloWhatsapp, #articuloLinkedIn, #articuloDireccion, #articuloNombre{
+        grid-template-columns: 100px 1fr;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 450px*/
+@media screen and (max-width: 450px){
+
+    /*Estilos aplicados a la sección de datos personales*/
+    #gridDatosPersonales{
+        grid-template-columns: 1fr;
+        grid-template-rows: 160px 1fr;
+    }
+
+    /*Estilos aplicados a la foto de la sección de datos personales*/
+    #fotoCurriculum{
+        width: 120px;
+        height: 120px;
+    }
+
+    /*Estilos aplicados a todos los artículos de la sección de datos personales, menos al de la foto*/
+    #articuloNombre, #articuloApellidos, #articuloTelefono, #articuloFechaNac, #articuloCorreo,
+    #articuloWhatsapp, #articuloLinkedIn, #articuloDireccion, #articuloNombre{
+        grid-template-columns: 85px 1fr;
+    }
+}

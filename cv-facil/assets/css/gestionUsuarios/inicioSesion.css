@@ -1,0 +1,130 @@
+/*Estilos aplicados al cuerpo de la página, al formulario de la página y a los artículos del formulario*/
+body, form, form > article{
+    align-items: center;
+}
+
+/*Estilos aplicados al cuerpo de la página, a la sección de la página y al formulario de la página*/
+body, main > section, form{
+    display: flex;
+}
+
+/*Estilos aplicados al cuerpo de la página y al formulario de la página*/
+body, form{
+    justify-content: center;
+}
+
+/*Estilos aplicados a la sección de la página y al formulario de la página*/
+main > section, form{
+    flex-direction: column;
+}
+
+/*Estilos aplicados a la sección de la página*/
+main > section{
+    border-radius: 10px;
+    background-color: white;
+    padding: 35px;
+    border: 1px solid grey;
+    align-items: center;
+}
+
+/*Estilos aplicados a la cabecera de la sección, a los parrafos y al enlace de crear cuenta*/
+section > header, p, #enlaceCrearCuenta{
+    text-align: center;
+}
+
+/*Estilos aplicados a la cabecera de la sección*/
+section > header{
+    font-size: 2em;
+}
+
+/*Estilos aplicados a los parrafos*/
+main p{
+    font-size: 1.4em;
+    padding: 25px 0;
+}
+
+/*Estilos aplicados al mensaje de error que puede aparecer*/
+#mensajeError{
+    padding: 15px 0;
+    max-width: 570px;
+}
+
+/*Estilos aplicados al formulario de la página*/
+form{
+    margin-top: 10px;
+    gap: 25px;
+}
+
+/*Estilos aplicados a los artículos del formulario de la página*/
+form > article{
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    width: 100%;
+    gap: 10px;
+}
+
+/*Estilos aplicados al artículo con los input de contraseña del formulario*/
+form > article.articulosInputsContrasenia{
+    grid-template-columns: 230px 1fr 24px;
+}
+
+/*Estilos aplicados al icono de mostrar u ocultar contraseña, a los label e input del formulario de la página, al botón de 
+    'Iniciar sesión' y del enlace de 'Crear cuenta'*/
+main i::before, form > article > label, form > article > input, #btnIniciarSesion, #enlaceCrearCuenta{
+    font-size: 1.5em;
+}
+
+/*Estilos aplicados a los label del formulario de la página*/
+form > article > label{
+    display: inline-block;
+    text-align: right;
+}
+
+/*Estilos aplicados al enlace de 'Crear cuenta'*/
+#enlaceCrearCuenta{
+    display: block;
+    color: #5B91C9;
+    text-decoration: none;
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 660px*/
+@media screen and (max-width: 660px){
+
+    /*Estilos aplicados a los artículos del formulario de la página*/
+    form > article{
+        grid-template-columns: 1fr;
+    }
+
+    /*Estilos aplicados al artículo de la contraseña del formulario de la página*/
+    form > article.articulosInputsContrasenia{
+        grid-template-columns: 1fr 24px;
+    }
+
+    /*Estilos aplicados a los label de los artículos del formulario de la página*/
+    form > article > label{
+        text-align: left;
+    }
+
+    /*Estilos aplicados al label del artículo de la contraseña del formulario de la página*/
+    form > article.articulosInputsContrasenia > label{
+        grid-column: 1 / 3;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 600px*/
+@media screen and (max-width: 600px){
+
+    /*Estilos aplicados al artículo de la contraseña del formulario de la página*/
+    form > article.articulosInputsContrasenia{
+        grid-template-columns: 1fr 19.2px;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 450px*/
+@media screen and (max-width: 450px){
+
+    /*Estilos aplicados al artículo de la contraseña del formulario de la página*/
+    form > article.articulosInputsContrasenia{
+        grid-template-columns: 1fr 16.8px;
+    }
+}

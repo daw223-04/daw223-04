@@ -1,0 +1,257 @@
+/*Estilos aplicados al título de la cabecera de la página*/
+main > header > h2{
+    max-width: 830px !important;
+}
+
+/*Estilos aplicados a la sección que contiene el currículum y los botones, y a los artículos de los botones*/
+#seccionCurriculum, #articuloBotonesCurriculum{
+    display: flex;
+    justify-content: center;
+}
+
+/*Estilos aplicados a la sección que contiene el currículum y los artículos de los botones*/
+#seccionCurriculum{
+    gap: 30px;
+}
+
+/*Estilos aplicados al artículo que muestra el currículum generado y al botón de 'Descargar currículum'*/
+#articuloCurriculum, #descargarCurriculum{
+    margin-left: 30px;
+}
+
+/*Estilos aplicados al artículo que muestra el currículum generado*/
+#articuloCurriculum{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    grid-template-rows: 180px 1fr;
+    padding: 20px;
+    gap: 10px;
+    border: 1px solid grey;
+    margin-bottom: 20px;
+    width: 530px;
+    align-self: flex-start;
+    min-height: 750px;
+}
+
+/*Estilos aplicados al artículo que contiene la foto del currículum*/
+#imagenArticuloCurriculum{
+    align-self: center;
+}
+
+/*Estilos aplicados a la foto del currículum*/
+#fotoCurriculum{
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+}
+
+/*Estilos aplicados al nombre y apellidos mostrados en el currículum*/
+#datosPersonales > p:first-child{
+    font-size: 1.5em;
+}
+
+/*Estilos aplicados a los iconos del currículum*/
+i::before{
+    margin-right: 10px;
+}
+
+/*Estilos aplicados al artículo que contiene los estudios, experiencias, idiomas y datos de interés del currículum*/
+.articuloContieneDatosNoPersonales{
+    grid-column: 1 / 3;
+}
+
+/*Estilos aplicados a los artículos de estudios, experiencia laboral, idiomas y datos de interés del currículum mostrado*/
+.articuloContieneDatosNoPersonales > article{
+    margin-top: 20px;
+}
+
+/*Estilos aplicados al 1º artículo de los artículos de estudios, experiencia laboral, idiomas y datos de interés 
+    del currículum mostrado*/
+.articuloContieneDatosNoPersonales > article:first-child{
+    margin-top: 0 !important;
+}
+
+/*Estilos aplicados a los parrafos del currículum, a la cabecera de estudios, experiencia laboral, idiomas o datos
+    de interés, y al último artículo que se añada en el currículum*/
+#datosPersonales p, .articuloDatosNoPersonales > header, .articuloDatosNoPersonales > article:last-child{
+    margin-bottom: 5px;
+}
+
+/*Estilos aplicados a la cabecera de estudios, experiencia laboral, idiomas o datos de interés*/
+.articuloDatosNoPersonales > header{
+    font-size: 1.3em;
+}
+
+/*Estilos aplicados a los parrafos de los datos personales del currículum, a las líneas que aparecen antes de cada 
+    estudio/experiencia/idioma/dato de interés, a los estudios/experiencia/idiomas/datos de interés añadidos, y a 
+    los parrafos del artículo que contiene los botones de la página*/
+#datosPersonales > p, .articuloDatosNoPersonales > hr, .articuloDatosNoPersonales > article,
+#articuloBotonesCurriculum p{
+    margin-bottom: 6px !important;
+}
+
+/*Estilos aplicados al nombre y apellidos del currículum, al primer parrafo de los estudios/experiencia/idiomas/datos 
+    de interés del currículum y a los parrafos del artículo que contiene los botones de la página*/
+#datosPersonales > p:first-child, .articuloDatosNoPersonales > article > p:first-child,
+#articuloBotonesCurriculum p{
+    font-weight: bolder;
+}
+
+/*Estilos aplicados al último parrafo de cada uno de los estudios/experiencia/idiomas/datos de interés añadidos*/
+.articuloDatosNoPersonales > article > p:last-child{
+    margin-bottom: 0;
+}
+
+/*Estilos aplicados a los parrafos de los datos de interés añadidos*/
+.parrafoNoNegrita{
+    font-weight: 100 !important;
+}
+
+/*Estilos aplicados al artículo que contiene los botones de la página*/
+#articuloBotonesCurriculum{
+    gap: 250px;
+    flex-direction: column;
+    flex-basis: 500px;
+    justify-content: start;
+    padding-top: 120px;
+}
+
+/*Estilos aplicados a los artículos con botones o enlaces del artículo que contiene los botones de la página*/
+#articuloBotonesCurriculum > article > article{
+    text-align: center;
+}
+
+/*Estilos aplicados a los parrafos del artículo que contiene los botones de la página*/
+#articuloBotonesCurriculum p{
+    font-size: 1.6em;
+    line-height: 1.3em;
+    text-align: justify;
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 1240px*/
+@media screen and (max-width: 1240px){
+
+    /*Estilos aplicados a la sección que contiene el currículum y los artículos de los botones*/
+    #seccionCurriculum{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*Estilos aplicados al artículo que contiene el currículum*/
+    #articuloCurriculum{
+        order: 1;
+        margin-left: 0;
+        margin-bottom: 0;
+        align-self: center;
+        margin-bottom: 10px;
+    }
+
+    /*Estilos aplicados al artículo que contiene los botones de la página*/
+    #articuloBotonesCurriculum{
+        gap: 10px;
+        flex-basis: initial;
+        padding-top: 0;
+    }
+
+    /*Estilos aplicados a los artículos que están dentro del artículo que contiene los botones de la página*/
+    #articuloBotonesCurriculum > article{
+        width: 500px;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 700px*/
+@media screen and (max-width: 700px){
+
+    /*Estilos aplicados al artículo del currículum*/
+    #articuloCurriculum{
+        width: 500px;
+        grid-template-columns: 140px 1fr;
+        grid-template-rows: 150px 1fr;
+        font-size: 0.8em;
+        min-height: 707.55px;
+    }
+
+    /*Estilos aplicados a la foto del currículum*/
+    #fotoCurriculum{
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 600px*/
+@media screen and (max-width: 600px){
+
+    /*Estilos aplicados al artículo del currículum*/
+    #articuloCurriculum{
+        width: 440px;
+        grid-template-columns: 130px 1fr;
+        grid-template-rows: 130px 1fr;
+        font-size: 0.9em;
+        min-height: 622.64px;
+    }
+
+    #fotoCurriculum{
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 530px*/
+@media screen and (max-width: 530px){
+
+    /*Estilos aplicados al artículo del currículum*/
+    #articuloCurriculum{
+        width: 390px;
+        grid-template-columns: 123px 1fr;
+        grid-template-rows: 123px 1fr;
+        font-size: 0.85em;
+        min-height: 531.82px;
+    }
+
+    /*Estilos aplicados a la foto del currículum*/
+    #fotoCurriculum{
+        width: 123px;
+        height: 123px;
+    }
+
+    /*Estilos aplicados a los artículos del artículo que contiene los botones de la página*/
+    #articuloBotonesCurriculum > article{
+        width: 300px;
+    }
+
+    /*Estilos aplicados a los parrafos de los datos personales del currículum*/
+    #datosPersonales > p{
+        margin-bottom: 5px !important;
+    }
+
+    /*Estilos aplicados al botón de 'Descargar currículum'*/
+    #descargarCurriculum{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 450px*/
+@media screen and (max-width: 450px){
+
+    /*Estilos aplicados al artículo del currículum*/
+    #articuloCurriculum{
+        width: 360px;
+        grid-template-columns: 110px 1fr;
+        grid-template-rows: 110px 1fr;
+        font-size: 0.9em;
+        min-height: 490.91px;
+    }
+
+    /*Estilos aplicados a la foto del currículum*/
+    #fotoCurriculum{
+        width: 110px;
+        height: 110px;
+    }
+
+    /*Estilos aplicados a los parrafos de los datos personales del currículum*/
+    #datosPersonales > p{
+        margin-bottom: 4px !important;
+    }
+}

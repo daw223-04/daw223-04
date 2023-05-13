@@ -1,0 +1,121 @@
+/*Estilos aplicados a la sección que contiene el listado de curriculums y al artículo que contiene las acciones
+    de estos*/
+#seccionListadoCurriculum, .articuloAcciones{
+    display: grid;
+    align-items: center;
+}
+
+/*Estilos aplicados a la sección que contiene el listado de curriculums y al pie de página*/
+#seccionListadoCurriculum, footer{
+    padding: 10px;
+}
+
+/*Estilos aplicados a la sección que contiene el listado de curriculums*/
+#seccionListadoCurriculum{
+    grid-template-columns: 3fr 2fr 1fr;
+    gap: 5px 10px;
+}
+
+/*Estilos aplicados a la líneas del listado de curriculums y al mensaje que aparece en este cuando se estan
+    obteniendo los curriculums*/
+hr, #mensajeAdvertencia{
+    grid-column: 1 / 4;
+}
+
+/*Estilos aplicados al mensaje que aparece en este cuando se estan obteniendo los curriculums y a los elementos
+    de la 1ª fila del listado de curriculums*/
+#mensajeAdvertencia, .cabeceraListado{
+    font-weight: bolder;
+}
+
+/*Estilos aplicados al mensaje que aparece en este cuando se estan obteniendo los curriculums y a los artículos de las
+    acciones de cada currículum*/
+#mensajeAdvertencia, .articuloAcciones{
+    padding: 10px 0;
+}
+
+/*Estilos aplicados al mensaje que aparece en este cuando se estan obteniendo los curriculums*/
+#mensajeAdvertencia{
+    font-size: 1.5em;
+}
+
+/*Estilos aplicados a los parrafos de la sección que contiene el listado de curriculums y a los artículos de las acciones
+    de cada currículum*/
+#seccionListadoCurriculum > p, .articuloAcciones{
+    justify-self: center;
+    text-align: center;
+}
+
+/*Estilos aplicados a los elementos de la 1ª fila del listado de curriculums*/
+.cabeceraListado{
+    font-size: 1.4em;
+}
+
+/*Estilos aplicados a los nombres y fechas de guardado de cada currículum*/
+.elementoListado{
+    font-size: 1.2em;
+}
+
+/*Estilos aplicados a los artículos de las acciones de cada currículum*/
+.articuloAcciones{
+    grid-template-columns: 30px 30px 30px;
+    gap: 10px;
+    justify-items: center;
+    justify-content: center;
+}
+
+/*Estilos aplicados a los iconos de las acciones de cada currículum*/
+main i::before{
+    font-size: 30px;
+}
+
+/*Estilos aplicados a la imagen de la modificación de un currículum*/
+section img{
+    width: 30px;
+    height: 30px;
+}
+
+/*Estilos aplicados al pie de página*/
+footer{
+    text-align: right;
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 600px*/
+@media screen and (max-width: 600px){
+
+    /*Estilos aplicados a los artículos de las acciones de cada currículum*/
+    .articuloAcciones{
+        grid-template-columns: 25px 25px 25px;
+    }
+
+    /*Estilos aplicados a los iconos de las acciones de cada currículum*/
+    main i::before{
+        font-size: 25px;
+    }
+    
+    /*Estilos aplicados a la imagen de la modificación de un currículum*/
+    section img{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 450px*/
+@media screen and (max-width: 450px){
+
+    /*Estilos aplicados a los artículos de las acciones de cada currículum*/
+    .articuloAcciones{
+        grid-template-columns: 20px 20px 20px;
+    }
+
+    /*Estilos aplicados a los iconos de las acciones de cada currículum*/
+    main i::before{
+        font-size: 20px;
+    }
+    
+    /*Estilos aplicados a la imagen de la modificación de un currículum*/
+    section img{
+        width: 20px;
+        height: 20px;
+    }
+}

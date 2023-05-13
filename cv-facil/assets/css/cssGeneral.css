@@ -1,0 +1,152 @@
+/*Estilos aplicados a todos los elementos de la página*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Estilos aplicados a todo el cuerpo de la página*/
+body{
+    background: linear-gradient(to bottom, white,  rgba(91, 145, 201, .5));
+    min-height: 100vh;
+}
+
+/*Estilos aplicados a la cabecera del main, a la ventana modal y al artículo de la ventana modal*/
+main > header, #ventanaModal, #articuloVentanaModal{
+    justify-content: center;
+}
+
+/*Estilos aplicados a la cabecera del main*/
+main > header{
+    font-size: 2em;
+    padding: 15px;
+    display: flex;
+}
+
+/*Estilos aplicados al título de la cabecera del main*/
+main > header > h2{
+    max-width: 600px;
+    text-align: center;
+}
+
+/*Estilos aplicados a los botones, enlaces e input de tipo submit que funcionan como botones, además de al artículo que es
+    hijo directo de la ventana modal*/
+button.botonPrincipal, button.botonSecundario, a.botonEnlace, input[type="submit"], #articuloVentanaModal{
+    border-radius: 10px;
+}
+
+/*Estilos aplicados a los botones, enlaces e input de tipo submit que funcionan como botones*/
+button.botonPrincipal, button.botonSecundario, a.botonEnlace, input[type="submit"]{
+    padding: 10px;
+    border: 0;
+    color: white;
+    font-size: 1.3em;
+}
+
+/*Estilos aplicados a los enlaces que funcionan como botones*/
+a.botonEnlace{
+    display: inline-block;
+    text-decoration: none;
+}
+
+/*Estilos aplicados a los botones de acciones principales y a los input de tipo submit*/
+.botonPrincipal, input[type="submit"]{
+    background-color: #08B57C;
+}
+
+/*Estilos aplicados a los botones de acciones secundarias*/
+.botonSecundario{
+    background-color: #2D21BC;
+}
+
+/*Estilos aplicados a los mensajes de error que aparecen en ciertas páginas*/
+.mensajeError{
+    color: red;
+    font-weight: bolder;
+}
+
+/*Estilos aplicados a la ventana modal y a todos sus descendientes*/
+#ventanaModal, #articuloVentanaModal, #articuloVentanaModal *{
+    display: none;
+}
+
+/*Estilos aplicados a la ventana modal y al artículo que es hijo directo de esta*/
+#ventanaModal, #articuloVentanaModal{
+    align-items: center;
+    z-index: 1;
+}
+
+/*Estilos aplicados a la ventana modal, al artículo de esta que contiene 2 botones, y al input de la 
+    ventana modal*/
+#ventanaModal, #articuloDosBotonesVentanaModal, #inputVentanaModal{
+    width: 100%;
+}
+
+/*Estilos aplicados a la ventana modal*/
+#ventanaModal{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.28);
+    height: 100%;
+}
+
+/*Estilos aplicados a los botones, enlaces e inputs de la ventana modal*/
+#ventanaModal button, #ventanaModal a.botonEnlace, #inputVentanaModal{
+    font-size: 1.5em;
+}
+
+/*Estilos aplicados a los botones y enlaces de la ventana modal*/
+#ventanaModal button, #ventanaModal a.botonEnlace{
+    margin-top: 15px;
+}
+
+/*Estilos aplicados al artículo de la ventana modal y a los parrafos de esta*/
+#articuloVentanaModal, #articuloVentanaModal > p{
+    text-align: center;
+}
+
+/*Estilos aplicados al artículo de la ventana modal*/
+#articuloVentanaModal{
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    line-height: 2em;
+}
+
+/*Estilos aplicados a los parrafos de la ventana modal*/
+#articuloVentanaModal > p{
+    font-size: 1.7em;
+    max-width: 430px;
+}
+
+/*Estilos aplicados al parrafo de mensaje de error de la ventana modal*/
+#mensajeErrorVentanaModal{
+    font-size: 1.4em !important;
+}
+
+/*Estilos aplicados al input de la ventana modal*/
+#inputVentanaModal{
+    margin-top: 10px;
+}
+
+/*Estilos aplicados al artículo que contiene 2 botones de la ventana modal*/
+#articuloDosBotonesVentanaModal{
+    justify-content: space-between;
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 600px*/
+@media screen and (max-width: 600px){
+
+    /*Estilos aplicados al cuerpo de la página*/
+    body{
+        font-size: 0.8em;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 450px*/
+@media screen and (max-width: 450px){
+
+    /*Estilos aplicados al cuerpo de la página*/
+    body{
+        font-size: 0.7em;
+    }
+}

@@ -1,0 +1,103 @@
+version: '3.1'
+
+# Declaración de servicios
+services:
+
+  # Contenedor que contendrá Apache, PHP y Composer, y que será el encargado de desplegar el proyecto
+  php-apache:
+
+    # Imagen a partir de la cual se crea el contenedor
+    image: daw22304/servidor_web_pfc:1.0.0
+
+    # Nombre del contenedor
+    container_name: php-apache
+
+    # Hacemos que el contenedor se reinicie siempre que lo necesite
+    restart: always
+
+    # Configuramos los puertos de acceso
+    ports:
+      - 80:80
+
+    # Hacemos que este servicio arranque después de los otros 2 servicios declarados en nuestro docker-compose
+    depends_on:
+      - mysql
+      - phpmyadmin
+
+    # Indicamos el fichero de donde se obtendrán las variables de entorno del contenedor
+    env_file:
+      - variables_servidor_web.env
+
+    # Permitimos el acceso desde el servicio de PHP-Apache al servicio de BD
+    links:
+      - mysql
+
+    # Configuramos la IP interna que tendrá el contenedor
+    networks:
+      red_interna:
+        ipv4_address: 192.168.30.2
+
+  # Contenedor que contendrá la BD a usar en el proyecto
+  mysql:
+
+    # Imagen a partir de la cual se crea el contenedor
+    image: daw22304/bd_pfc:1.0.0
+
+    # Nombre del contenedor
+    container_name: mysql
+
+    # Hacemos que el contenedor se reinicie siempre que lo necesite
+    restart: always
+
+    # Exponemos el puerto de acceso a la BD al resto de contenedores
+    expose:
+      - 3306
+
+    # Configuramos los puertos de acceso
+    ports:
+      - 3306:3306
+
+    # Ponemos la contraseña del root a partir de una variable de entorno
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+
+    # Configuramos la IP interna que tendrá el contenedor
+    networks:
+      red_interna:
+        ipv4_address: 192.168.30.3
+
+  # Contenedor que contendrá un gestor gráfico para acceder a la BD 
+  phpmyadmin:
+
+    # Imagen a partir de la cual se crea el contenedor
+    image: phpmyadmin:5.2.0
+
+    # Nombre del contenedor
+    container_name: phpmyadmin
+
+    # Hacemos que el contenedor se reinicie siempre que lo necesite
+    restart: always
+
+    # Configuramos los puertos de acceso
+    ports:
+      - 8080:80
+
+    # Hacemos que este servicio arranque después de arrancar el servicio de BD
+    depends_on:
+      - mysql
+
+    # Ponemos el host de PhpMyAdmin a partir de una variable de entorno
+    environment:
+      - PMA_HOST=mysql
+
+    # Configuramos la IP interna que tendrá el contenedor
+    networks:
+      red_interna:
+        ipv4_address: 192.168.30.4
+
+# Definimos una red privada interna a la cual se conectarán todos nuestros contenedores, para así poder poner una IP fija a cada uno
+networks:
+  red_interna:
+    ipam:
+      config:
+        - subnet: 192.168.30.0/24

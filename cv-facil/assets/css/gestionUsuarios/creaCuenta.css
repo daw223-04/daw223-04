@@ -1,0 +1,116 @@
+/*Estilos aplicados al cuerpo de la página, al formulario de la página y a los artículos del formulario*/
+body, form, form > article{
+    align-items: center;
+}
+
+/*Estilos aplicados al cuerpo de la página, a la sección de la página y al formulario de la página*/
+body, main > section, form{
+    display: flex;
+}
+
+/*Estilos aplicados al cuerpo de la página y al formulario de la página*/
+body, form{
+    justify-content: center;
+}
+
+/*Estilos aplicados a la sección de la página y al formulario de la página*/
+main > section, form{
+    flex-direction: column;
+}
+
+/*Estilos aplicados a la sección de la página*/
+main > section{
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid grey;
+    align-items: center;
+}
+
+/*Estilos aplicados a la cabecera de la sección y al formulario de la página*/
+section > header, #formularioCreaCuenta{
+    text-align: center;
+}
+
+/*Estilos aplicados a la cabecera de la sección*/
+section > header{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/*Estilos aplicados al parrafo que contiene el mensaje de error*/
+#mensajeError{
+    font-size: 1.4em;
+    padding: 15px 0;
+    text-align: center;
+    max-width: 560px;
+}
+
+/*Estilos aplicados al formulario de la página*/
+form{
+    margin-top: 10px;
+    gap: 25px;
+}
+
+/*Estilos aplicados a los artículos del formulario*/
+form > article{
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    width: 100%;
+    gap: 10px;
+}
+
+/*Estilos aplicados a los artículos con los input de contraseña del formulario*/
+form > article.articulosInputsContrasenia{
+    grid-template-columns: 220px 1fr 24px;
+}
+
+/*Estilos aplicados al icono de mostrar/ocultar contraseña, a los label e inputs de los artículos del formulario
+    y al botón de 'Crear cuenta'*/
+main i::before, form > article > label, form > article > input, #btnCreacionCuenta{
+    font-size: 1.5em;
+}
+
+/*Estilos aplicados a los label de los artículos del formulario*/
+form > article > label{
+    display: inline-block;
+    text-align: right;
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 600px*/
+@media screen and (max-width: 600px){
+
+    /*Estilos aplicados al formulario de la página*/
+    form{
+        gap: 15px;
+    }
+
+    /*Estilos aplicados a los artículos del formulario de la página*/
+    form > article{
+        grid-template-columns: 1fr;
+    }
+
+    /*Estilos aplicados a los artículos de las contraseñas del formulario de la página*/
+    form > article.articulosInputsContrasenia{
+        grid-template-columns: 1fr 19.2px;
+    }
+
+    /*Estilos aplicados a los label de los artículos de las contraseñas del formulario de la página*/
+    form > article.articulosInputsContrasenia > label{
+        grid-column: 1 / 3;
+    }
+
+    /*Estilos aplicados a los label de los artículos del formulario de la página*/
+    form > article > label{
+        text-align: left;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 450px*/
+@media screen and (max-width: 450px){
+
+    /*Estilos aplicados a los artículos de las contraseñas del formulario de la página*/
+    form > article.articulosInputsContrasenia{
+        grid-template-columns: 1fr 16.8px;
+    }
+}

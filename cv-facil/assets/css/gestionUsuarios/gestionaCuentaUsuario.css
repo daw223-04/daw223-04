@@ -1,0 +1,188 @@
+/*Estilos aplicados a la sección que contiene los datos actuales y a los artículos del formulario de modificación*/
+#seccionDatosActuales, #articuloInputsModificacion > article{
+    display: grid;
+}
+
+/*Estilos aplicados a la sección que contiene los datos actuales y a la sección que contiene el formulario de 
+    modificación*/
+#seccionDatosActuales, #seccionModificaDatos{
+    margin: 15px;
+}
+
+/*Estilos aplicados a la sección que contiene los datos actuales, a los artículos de dicha sección, y a los
+    artículos del formulario de modificación*/
+#seccionDatosActuales, #seccionDatosActuales > article, #articuloInputsModificacion > article{
+    align-items: center;
+}
+
+/*Estilos aplicados a la sección que contiene los datos actuales*/
+#seccionDatosActuales{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    gap: 15px;
+    align-content: center;
+}
+
+/*Estilos aplicados a los artículos de la sección que contiene los datos actuales y al formulario de modificación*/
+#seccionDatosActuales > article, #articuloInputsModificacion{
+    display: flex;
+}
+
+/*Estilos aplicados a los artículos de la sección que contiene los datos actuales y a los artículos del formulario 
+    de modificación*/
+#seccionDatosActuales > article, #articuloInputsModificacion > article{
+    gap: 10px;
+}
+
+/*Estilos aplicados a los parrafos de los artículos de la sección que contiene los datos actuales*/
+#seccionDatosActuales p{
+    font-size: 1.4em;
+}
+
+/*Estilos aplicados a los iconos de mostrar/ocultar contraseña y a los label del formulario de modificación*/
+main i, #articuloInputsModificacion label{
+    display: inline-block;
+}
+
+/*Estilos aplicados a los iconos de mostrar/ocultar contraseña*/
+main i{
+    width: 24px;
+    height: 24px;
+}
+
+/*Estilos aplicados a los iconos de mostrar/ocultar contraseña y a la cabecera de la sección del formulario de modificación*/
+main i::before, #seccionModificaDatos > header{
+    font-size: 1.5em;
+}
+
+/*Estilos aplicados al texto donde se encuentra la contraseña actual y al mensaje de error del formulario de modificación*/
+#contraseniaActual, #seccionModificaDatos > p.mensajeError{
+    display: none;
+}
+
+/*Estilos aplicados a la sección del formulario de modificación*/
+#seccionModificaDatos{
+    background-color: white;
+    padding: 15px;
+    border: 1px solid grey;
+}
+
+/*Estilos aplicados a la cabecera de la sección y al mensaje de error del formulario de modificación*/
+#seccionModificaDatos > header, #seccionModificaDatos > p.mensajeError{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*Estilos aplicados al mensaje de error y a los labels e inputs del formulario de modificación*/
+#seccionModificaDatos > p.mensajeError, #articuloInputsModificacion label, 
+#articuloInputsModificacion input{
+    font-size: 1.2em;
+}
+
+/*Estilos aplicados al formulario de modificación*/
+#articuloInputsModificacion{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+/*Estilos aplicados a los artículos del formulario de modificación*/
+#articuloInputsModificacion > article{
+    grid-template-columns: 240px 1fr;
+    width: 100%;
+}
+
+/*Estilos aplicados a los label del formulario de modificación y al pie de página*/
+#articuloInputsModificacion label, main > footer{
+    text-align: right;
+}
+
+/*Estilos aplicados a los artículos de contraseñas del formulario de modificación*/
+#articuloInputsModificacion > article.articuloInputContrasenia{
+    grid-template-columns: 240px 1fr 24px;
+}
+
+/*Estilos aplicados al pie del formulario de modificación*/
+#articuloInputsModificacion > footer{
+    align-self: flex-end;
+}
+
+/*Estilos aplicados al pie de página*/
+main > footer{
+    margin: 10px 15px;
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 1040px*/
+@media screen and (max-width: 1040px){
+
+    /*Estilos aplicados a la sección que contiene los datos actuales*/
+    #seccionDatosActuales{
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 800px*/
+@media screen and (max-width: 800px){
+
+    /*Estilos aplicados a los artículos del formulario de modificación*/
+    #articuloInputsModificacion > article{
+        grid-template-columns: 1fr;
+    }
+
+    /*Estilos aplicados a los artículos de las contraseñas del formulario de modificación*/
+    #articuloInputsModificacion > article.articuloInputContrasenia{
+        grid-template-columns: 1fr 24px;
+    }
+
+    /*Estilos aplicados a los label del formulario de modificación*/
+    #articuloInputsModificacion label{
+        text-align: left;
+    }
+
+    /*Estilos aplicados a los label de los artículos de contraseña del formulario de modificación*/
+    #articuloInputsModificacion > article.articuloInputContrasenia > label{
+        grid-column: 1 / 3;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 600px*/
+@media screen and (max-width: 600px){
+
+    /*Estilos aplicados a los iconos de mostrar/ocultar contraseña*/
+    main i{
+        width: 19px;
+        height: 19px;
+    }
+
+    /*Estilos aplicados a los iconos de mostrar/ocultar contraseña*/
+    main i::before{
+        font-size: 1.47em;
+    }
+
+    /*Estilos aplicados a los artículos de las contraseñas del formulario de modificación*/
+    #articuloInputsModificacion > article.articuloInputContrasenia{
+        grid-template-columns: 1fr 19px;
+    }
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 450px*/
+@media screen and (max-width: 450px){
+
+    /*Estilos aplicados a los iconos de mostrar/ocultar contraseña*/
+    main i{
+        width: 16px;
+        height: 16px;
+    }
+
+    /*Estilos aplicados a los iconos de mostrar/ocultar contraseña*/
+    main i::before{
+        font-size: 1.4em;
+    }
+
+    /*Estilos aplicados a los artículos de las contraseñas del formulario de modificación*/
+    #articuloInputsModificacion > article.articuloInputContrasenia{
+        grid-template-columns: 1fr 16px;
+    }
+}

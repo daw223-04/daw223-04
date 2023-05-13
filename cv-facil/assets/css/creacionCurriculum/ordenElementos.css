@@ -1,0 +1,107 @@
+/*Estilos aplicados a la cabecera de los artículos de ordenación*/
+.articulosOrdenacion > header{
+    text-align: center;
+}
+
+/*Estilos aplicados a los artículos de ordenación*/
+.articulosOrdenacion{
+    padding: 15px;
+}
+
+/*Estilos aplicados al formulario de la página, a la sección que contiene los 2 artículos de ordenaciones, a los artículos que contienen 
+    los input de la ordenación cronológica y al pie de página*/
+#formularioOrdenaciones, #seccionContieneOrdenaciones, #articuloOrdenacionCronologica > article, footer{
+    display: flex;
+}
+
+/*Estilos aplicados al formulario de la página y a la sección que contiene los 2 artículos de ordenaciones*/
+#formularioOrdenaciones, #seccionContieneOrdenaciones{
+    justify-content: center;
+}
+
+/*Estilos aplicados al formulario de la página*/
+#formularioOrdenaciones{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*Estilos aplicados a la sección que contiene las ordenaciones, a los artículos de la ordenación de apartados
+    y de la cronología y al pie de página*/
+#seccionContieneOrdenaciones, #articuloOrdenacionApartados > article, #articuloOrdenacionCronologica > article, footer{
+    gap: 10px;
+}
+
+/*Estilos aplicados a los artículos de ordenación*/
+.articulosOrdenacion{
+    border-radius: 10px;
+    border: 1px solid grey;
+    flex-basis: 50%;
+    background-color: white;
+}
+
+/*Estilos aplicados a la cabecera de los artículos de ordenación*/
+.articulosOrdenacion > header{
+    margin-bottom: 25px;
+    font-size: 1.6em;
+}
+
+/*Estilos aplicados a los artículos de la ordenación de apartados y de la cronología*/
+.articulosOrdenacion > article{
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+/*Estilos aplicados a los artículos del select del artículo de ordenación de apartados*/
+#articuloOrdenacionApartados > article{
+    display: grid;
+    grid-template-columns: 20px 1fr;
+}
+
+/*Estilos aplicados a los label de los artículos de ordenación*/
+.articulosOrdenacion > article > label{
+    display: block;
+}
+
+/*Estilos aplicados a los label y select de los artículos de ordenación*/
+.articulosOrdenacion > article > label, .articulosOrdenacion > article > select{
+    font-size: 1.3em;
+}
+
+/*Estilos aplicados a los label del artículo de ordenación de apartados*/
+#articuloOrdenacionApartados > article > label{
+    text-align: right;
+}
+
+/*Estilos aplicados al último artículo de los artículos de ordenación*/
+.articulosOrdenacion > article:last-child{
+    margin-bottom: 5px;
+}
+
+/*Estilos aplicados a los artículos de los radio button en los botones de la ordenación de la cronología*/
+#articuloOrdenacionCronologica > article{
+    justify-content: flex-start;
+}
+
+/*Estilos aplicados al pie de página*/
+footer{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*Etiqueta media puesta para afectar a las pantallas a partir de menos de 850px*/
+@media screen and (max-width: 850px){
+
+    /*Estilos aplicados a la sección que contiene los artículos de ordenaciones*/
+    #seccionContieneOrdenaciones{
+        flex-wrap: wrap;
+    }
+
+    /*Estilos aplicados a los artículos de ordenación*/
+    .articulosOrdenacion{
+        flex-basis: 100%;
+    }
+}
