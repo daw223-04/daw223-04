@@ -1043,10 +1043,10 @@ function compruebaInputsFormularioYDatosNoPersonales(e, estudiosAnadidos, experi
         // Apellidos con longitud incorrecta
         muestraVentanaModalParrafoYBoton('Los apellidos no pueden ocupar más de 50 caracteres.', 'Volver');
         bandera = false;
-    }else if(e.target['idTelefono'].value.length != 15){
+    }else if(e.target['idTelefono'].value.length != 9){
         
         // Teléfono con longitud incorrecta
-        muestraVentanaModalParrafoYBoton('El teléfono debe ocupar 15 caracteres.', 'Volver');
+        muestraVentanaModalParrafoYBoton('El teléfono debe ocupar 9 caracteres.', 'Volver');
         bandera = false;
     }else if(!compruebaFechasIntroducidas(e.target['idFechaNac'].value)){
 
@@ -1071,10 +1071,10 @@ function compruebaInputsFormularioYDatosNoPersonales(e, estudiosAnadidos, experi
         // Correo con longitud incorrecta
         muestraVentanaModalParrafoYBoton('El correo debe ocupar entre 15 y 120 caracteres.', 'Volver');
         bandera = false;
-    }else if(e.target['idWhatsapp'].value != '' && e.target['idWhatsapp'].value.length != 15){
+    }else if(e.target['idWhatsapp'].value != '' && e.target['idWhatsapp'].value.length != 9){
 
         // Whatsapp con longitud incorrecta, si es que se ha indicado
-        muestraVentanaModalParrafoYBoton('El teléfono del Whatsapp debe ocupar 15 caracteres.', 'Volver');
+        muestraVentanaModalParrafoYBoton('El teléfono del Whatsapp debe ocupar 9 caracteres.', 'Volver');
         bandera = false;
     }else if(e.target['idLinkedIn'].value != '' && (e.target['idLinkedIn'].value.length < 28 || e.target['idLinkedIn'].value.length > 150)){
         
@@ -1091,12 +1091,12 @@ function compruebaInputsFormularioYDatosNoPersonales(e, estudiosAnadidos, experi
         // Apellidos con patrón incorrecto
         muestraVentanaModalParrafoYBoton('Los apellidos no tienen un formato válido.', 'Volver');
         bandera = false;
-    }else if(!/^\(\+34\)\s\d{9}$/.test(e.target['idTelefono'].value)){
+    }else if(!/^\d{9}$/.test(e.target['idTelefono'].value)){
         
         // Teléfono con patrón incorrecto
         muestraVentanaModalParrafoYBoton('El teléfono no tiene un formato válido.', 'Volver');
         bandera = false;
-    }else if(!/^(C\/|Avda\.|Plaza)\s(((de(\sla)?\s|del\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}º\s[A-Z])?$/.test
+    }else if(!/^(C\/|Avda\.|Plaza)\s(((de(\s(la|las|los))?\s|del\s|los\s|las\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}º\s[A-Z])?$/.test
         (e.target['idDireccion'].value)){
         
         // Dirección con patrón incorrecto
@@ -1107,7 +1107,7 @@ function compruebaInputsFormularioYDatosNoPersonales(e, estudiosAnadidos, experi
         // Correo con patrón incorrecto
         muestraVentanaModalParrafoYBoton('El correo no tiene un formato válido.', 'Volver');
         bandera = false;
-    }else if(e.target['idWhatsapp'].value != '' && !/^\(\+34\)\s\d{9}$/.test(e.target['idWhatsapp'].value)){
+    }else if(e.target['idWhatsapp'].value != '' && !/^\d{9}$/.test(e.target['idWhatsapp'].value)){
         
         // Whatsapp con patrón incorrecto, si es que se ha indicado
         muestraVentanaModalParrafoYBoton('El teléfono del Whatsapp no tiene un formato válido.', 'Volver');

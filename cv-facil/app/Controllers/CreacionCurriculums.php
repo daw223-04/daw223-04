@@ -302,20 +302,20 @@ class CreacionCurriculums extends FuncionesComunes
             $this->generaArrayValidacionDato('Normal', $apellidos, 'Los apellidos no poseen un formato de caracteres adecuado.', array('minimaLongitud' => 0, 
                 'maximaLongitud' => 50, 'campo' => 'Los apellidos', 'patron' => '/^(de\s(la\s)?|del\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+$/'), 
                 $arrayValidacion);
-            $this->generaArrayValidacionDato('Normal', $telefono, 'El teléfono no tiene un formato de caracteres adecuado.', array('minimaLongitud' => 15, 
-                'maximaLongitud' => 15, 'campo' => 'El teléfono', 'patron' => '/^\(\+34\)\s\d{9}$/'), $arrayValidacion);
+            $this->generaArrayValidacionDato('Normal', $telefono, 'El teléfono no tiene un formato de caracteres adecuado.', array('minimaLongitud' => 9, 
+                'maximaLongitud' => 9, 'campo' => 'El teléfono', 'patron' => '/^\d{9}$/'), $arrayValidacion);
             $this->generaArrayValidacionDato('Fecha', $fechaNac, 'La fecha de nacimiento no tiene un formato de caracteres adecuado.', array('minimo' => '1960-01-01', 
                 'maximo' => date('Y-m-d', strtotime('-15 years', strtotime(date('Y-m-d'))))), $arrayValidacion);
             $this->generaArrayValidacionDato('Normal', $direccion, 'La dirección no tiene un formato de caracteres adecuado.', array('minimaLongitud' => 10, 
                 'maximaLongitud' => 180, 'campo' => 'La dirección', 'patron' => 
-                '/^(C\/|Avda\.|Plaza)\s(((de(\sla)?\s|del\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}º\s[A-Z])?$/'), $arrayValidacion);
+                '/^(C\/|Avda\.|Plaza)\s(((de(\s(la|las|los))?\s|del\s|los\s|las\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}º\s[A-Z])?$/'), $arrayValidacion);
             $this->generaArrayValidacionDato('Normal', $correo, 'El correo no tiene un formato de caracteres adecuado.', array('minimaLongitud' => 15, 
                 'maximaLongitud' => 120, 'campo' => 'El correo', 'patron' => '/^[\wÁÉÍÓÚÑáéíóúñ\.]+@[a-z]+(\.(es|com)){1,2}$/'), $arrayValidacion);
             
             // Metemos el Whatsapp y el LinkedIn al array de validaciones solo si es necesario
             if($whatsapp !== ''){
-                $this->generaArrayValidacionDato('Normal', $whatsapp, 'El número de Whatsapp no tiene un formato de caracteres adecuado.', array('minimaLongitud' => 15, 
-                    'maximaLongitud' => 15, 'campo' => 'El número de Whatsapp', 'patron' => '/^\(\+34\)\s\d{9}$/'), $arrayValidacion);
+                $this->generaArrayValidacionDato('Normal', $whatsapp, 'El número de Whatsapp no tiene un formato de caracteres adecuado.', array('minimaLongitud' => 9, 
+                    'maximaLongitud' => 9, 'campo' => 'El número de Whatsapp', 'patron' => '/^\d{9}$/'), $arrayValidacion);
             }
             if($linkedin !== ''){
                 $this->generaArrayValidacionDato('Normal', $linkedin, 'El enlace de LinkedIn no tiene un formato de caracteres adecuado.', array('minimaLongitud' => 28, 

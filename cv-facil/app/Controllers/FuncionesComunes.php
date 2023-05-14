@@ -567,7 +567,7 @@ abstract class FuncionesComunes extends BaseController
 
             // El mensaje de error variará dependiendo de si se tiene indicada una mínima longitud diferente de 0, o si
             //      se tienen la misma longitud mínima y máxima
-            if($minimaLongitud == 0 || $minimaLongitud== $maximaLongitud){
+            if($minimaLongitud == 0 || $minimaLongitud == $maximaLongitud){
                 $array['mensajeDetallado'] = $campo.' no puede ocupar más de '.$maximaLongitud.
                     ' caracteres.';
             }else{

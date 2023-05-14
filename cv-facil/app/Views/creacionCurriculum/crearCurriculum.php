@@ -32,8 +32,8 @@
                 generaArticleLabelInput('Apellidos', 'Apellidos*:', 'text', $array);
 
                 // Generamos el artículo del input del teléfono, comprobando si se ha recibido por parámetro
-                $array = array('required' => 'required', 'pattern' => '^\(\+34\)\s\d{9}$', 'placeholder' => 'Ej. (+34) 123456789', 
-                    'minlength' => '15', 'maxlength' => '15');
+                $array = array('required' => 'required', 'pattern' => '^\d{9}$', 'placeholder' => 'Ej. 123456789', 
+                    'minlength' => '9', 'maxlength' => '9');
                 if(isset($telefono)){
                     $array['value'] = $telefono;
                 }
@@ -47,7 +47,7 @@
                 generaArticleLabelInput('FechaNac', 'Fecha nac.*:', 'date', $array);
 
                 // Generamos el artículo del input de la dirección, comprobando si se ha recibido por parámetro
-                $array = array('required' => 'required', 'pattern' => '^(C\/|Avda\.|Plaza)\s(((de(\sla)?\s|del\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}º\s[A-Z])?$',
+                $array = array('required' => 'required', 'pattern' => '^(C\/|Avda\.|Plaza)\s(((de(\s(la|las|los))?\s|del\s|los\s|las\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}º\s[A-Z])?$',
                     'placeholder' => 'Ej. C/ Falsa, 123', 'minlength' => '10', 'maxlength' => '180');
                 if(isset($direccion)){
                     $array['value'] = $direccion;
@@ -63,7 +63,7 @@
                 generaArticleLabelInput('Correo', 'Correo elec.*:', 'text', $array);
 
                 // Generamos el artículo del input del teléfono de WhatsApp, comprobando si se ha recibido por parámetro
-                $array = array('pattern' => '^\(\+34\)\s\d{9}$', 'placeholder' => 'Ej. (+34) 123456789', 'minlength' => '15', 'maxlength' => '15');
+                $array = array('pattern' => '^\d{9}$', 'placeholder' => 'Ej. 123456789', 'minlength' => '9', 'maxlength' => '9');
                 if(isset($whatsapp)){
                     $array['value'] = $whatsapp;
                 }
