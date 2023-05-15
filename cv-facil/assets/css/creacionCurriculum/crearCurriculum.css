@@ -243,6 +243,11 @@ textarea{
     grid-template-columns: 1fr 1fr;
 }
 
+/*Estilos aplicados al label del cuadro de añadir datos de interés*/
+#tituloAnadeDatos{
+    text-align: left;
+}
+
 /*Etiqueta media puesta para afectar a las pantallas a partir de menos de 1070px*/
 @media screen and (max-width: 1070px){
 
@@ -415,6 +420,11 @@ textarea{
     #articuloWhatsapp, #articuloLinkedIn, #articuloDireccion, #articuloNombre{
         grid-template-columns: 100px 1fr;
     }
+
+    /*Estilos aplicados al artículo de fecha de fin de los cuadros de añadir*/
+    .filaTresDatosCuadroAnadir{
+        grid-template-columns: 1fr 110px;
+    }
 }
 
 /*Etiqueta media puesta para afectar a las pantallas a partir de menos de 450px*/
@@ -436,5 +446,10 @@ textarea{
     #articuloNombre, #articuloApellidos, #articuloTelefono, #articuloFechaNac, #articuloCorreo,
     #articuloWhatsapp, #articuloLinkedIn, #articuloDireccion, #articuloNombre{
         grid-template-columns: 85px 1fr;
+    }
+
+    /*Estilos aplicados al artículo de fecha de fin de los cuadros de añadir*/
+    .filaTresDatosCuadroAnadir{
+        grid-template-columns: 1fr 90px;
     }
 }

@@ -7,7 +7,7 @@ services:
   php-apache:
 
     # Imagen a partir de la cual se crea el contenedor
-    image: daw22304/servidor_web_pfc:1.1.0
+    image: daw22304/servidor_web_pfc:1.1.1
 
     # Nombre del contenedor
     container_name: php-apache
