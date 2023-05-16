@@ -77,7 +77,15 @@ function posicionaCuadroIniciaSesion(widthVentana, cuadroIniciaSesion){
     // Si el alto del cuerpo de la página es menor o igual que el de la pestaña, posicionamos la 
     //      ventana un poco más a la derecha
     if(document.querySelector('body').clientHeight > window.innerHeight){
-        cuadroIniciaSesion.setAttribute('style', 'left: ' + (widthVentana - 269) + 'px;');
+
+	// Dependiendo de si se esta usando un navegador en un Windows o Linux, sin ser Firefox en este último caso, 
+        //      o en otro sistema operativo o navegador, se desplaza la ventana un poco más a la izquierda o un poco menos
+        if(navigator.userAgent.indexOf('Windows') != -1 || (navigator.userAgent.indexOf('Linux') != -1 && 
+            navigator.userAgent.indexOf('Firefox') == -1)){
+            cuadroIniciaSesion.setAttribute('style', 'left: ' + (widthVentana - 269) + 'px;');
+        }else{
+            cuadroIniciaSesion.setAttribute('style', 'left: ' + (widthVentana - 253) + 'px;');
+        }
     }else{
         cuadroIniciaSesion.setAttribute('style', 'left: ' + (widthVentana - 253) + 'px;');
     }
@@ -95,7 +103,15 @@ function posicionaYMuestraCuadroIniciaSesion(widthVentana, cuadroIniciaSesion){
     // Si el alto del cuerpo de la página es menor o igual que el de la pestaña, posicionamos la 
     //      ventana un poco más a la derecha
     if(document.querySelector('body').clientHeight > window.innerHeight){
-        cuadroIniciaSesion.setAttribute('style', 'display: flex; left: ' + (widthVentana - 269) + 'px;');
+
+	// Dependiendo de si se esta usando un navegador en un Windows o Linux, sin ser Firefox en este último caso, 
+        //      o en otro sistema operativo o navegador, se desplaza la ventana un poco más a la izquierda o un poco menos
+        if(navigator.userAgent.indexOf('Windows') != -1 || (navigator.userAgent.indexOf('Linux') != -1 && 
+            navigator.userAgent.indexOf('Firefox') == -1)){
+            cuadroIniciaSesion.setAttribute('style', 'display: flex; left: ' + (widthVentana - 269) + 'px;');
+        }else{
+            cuadroIniciaSesion.setAttribute('style', 'display: flex; left: ' + (widthVentana - 253) + 'px;');
+        }
     }else{
         cuadroIniciaSesion.setAttribute('style', 'display: flex; left: ' + (widthVentana - 253) + 'px;');
     }
