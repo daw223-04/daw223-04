@@ -97,7 +97,7 @@
                 $experiencia);
         }else{
             generaSeccionEstudiosExperienciaIdiomas("3", "Experiencia", "Experiencia laboral", "Experiencias laborables añadidas", 
-                "Ej. Profesor de Matemáticas", "Ej: Universidad de Valladolid", "^(([A-ZÁÉÍÓÚÑ][a-záéíóúñ\.]+\s?)+((de(\sla)?|en|del)\s)+$");
+                "Ej. Profesor de Matemáticas", "Ej: Universidad de Valladolid", "^(([A-ZÁÉÍÓÚÑ][a-záéíóúñ\.]+\s?)+((de(\sla)?|en|del)\s)?)+$");
         }
 
         // Generamos el artículo de los idiomas, comprobando antes si se ha recibido idiomas por parámetro
