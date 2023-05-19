@@ -47,7 +47,7 @@
                 generaArticleLabelInput('FechaNac', 'Fecha nac.*:', 'date', $array);
 
                 // Generamos el artículo del input de la dirección, comprobando si se ha recibido por parámetro
-                $array = array('required' => 'required', 'pattern' => '^(C\/|Avda\.|Plaza)\s(((de(\s(la|las|los))?\s|del\s|los\s|las\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}º\s[A-Z])?$',
+                $array = array('required' => 'required', 'pattern' => '^(C\/|Avda\.|Plaza)\s(((de(\s(la|las|los))?\s|del\s|los\s|las\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}(º|°)\s[A-Z])?$',
                     'placeholder' => 'Ej. C/ Falsa, 123', 'minlength' => '10', 'maxlength' => '180');
                 if(isset($direccion)){
                     $array['value'] = $direccion;

@@ -221,7 +221,7 @@ class CreacionCurriculums extends FuncionesComunes
 
                     // Si ya existe una imagen asociada a la sesión, y no es una imagen que estemos obteniendo de BD, la cual empieza
                     //      por 'data:image', la borramos
-                    if($this->session->get('foto') && substr($_FILES['foto']['name'], 0, 10) != 'data:image'){
+                    if($this->session->get('foto') && substr($this->session->get('foto'), 0, 10) != 'data:image'){
                         unlink($this->session->get('foto'));
                     }
 
@@ -308,7 +308,7 @@ class CreacionCurriculums extends FuncionesComunes
                 'maximo' => date('Y-m-d', strtotime('-15 years', strtotime(date('Y-m-d'))))), $arrayValidacion);
             $this->generaArrayValidacionDato('Normal', $direccion, 'La dirección no tiene un formato de caracteres adecuado.', array('minimaLongitud' => 10, 
                 'maximaLongitud' => 180, 'campo' => 'La dirección', 'patron' => 
-                '/^(C\/|Avda\.|Plaza)\s(((de(\s(la|las|los))?\s|del\s|los\s|las\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}º\s[A-Z])?$/'), $arrayValidacion);
+                '/^(C\/|Avda\.|Plaza)\s(((de(\s(la|las|los))?\s|del\s|los\s|las\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}(º|°)\s[A-Z])?$/'), $arrayValidacion);
             $this->generaArrayValidacionDato('Normal', $correo, 'El correo no tiene un formato de caracteres adecuado.', array('minimaLongitud' => 15, 
                 'maximaLongitud' => 120, 'campo' => 'El correo', 'patron' => '/^[\wÁÉÍÓÚÑáéíóúñ\.]+@[a-z]+(\.(es|com)){1,2}$/'), $arrayValidacion);
             

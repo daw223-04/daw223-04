@@ -6,8 +6,8 @@
         <link rel="icon" type="imagex-ico" href="assets/img/iconoPagina.ico"/>
         <link rel="stylesheet" href="assets/css/cssGeneral.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"/>
-       	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-	<script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <script>
             let ip_pub = <?= '"'.$_ENV['ip_pub'].'"' ?>
         </script>
         <script src="assets/js/funcionesGenerales.js"></script>

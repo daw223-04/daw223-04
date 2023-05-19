@@ -69,7 +69,7 @@
 
 <h3>Anexo IV: Aplicación de las variables de entorno correctas</h3>
 
-<p>Una vez se tenga el repositorio clonado, se debe modificar una variable de entorno, la cual esta puesta en el fichero variables_servidor_web.env, y tiene el nombre de ip_pub, la cual permite indicar, al código de la aplicación, cual es la dirección IP del servidor donde se lanza:</p>
+<p>Una vez se tenga el repositorio clonado, se debe modificar una variable de entorno, la cual esta puesta en el fichero variables_servidor_web.env con el nombre de ip_pub, y que permite indicar, al código de la aplicación, cual es la dirección IP del servidor donde se lanza:</p>
 <ul>
 	<li>ip_pub=IP <---- Se define una variable de entorno ip_pub, la cual tendrá el valor de IP</li>
 </ul>

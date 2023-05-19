@@ -78,11 +78,18 @@ function posicionaCuadroIniciaSesion(widthVentana, cuadroIniciaSesion){
     //      ventana un poco más a la derecha
     if(document.querySelector('body').clientHeight > window.innerHeight){
 
-	// Dependiendo de si se esta usando un navegador en un Windows o Linux, sin ser Firefox en este último caso, 
-        //      o en otro sistema operativo o navegador, se desplaza la ventana un poco más a la izquierda o un poco menos
-        if(navigator.userAgent.indexOf('Windows') != -1 || (navigator.userAgent.indexOf('Linux') != -1 && 
-            navigator.userAgent.indexOf('Firefox') == -1)){
+        // Dependiendo de en que sistema se este mostrando la página, y, en determinados casos, también en función del navegador,
+        //      posicionamos el cuadro de inicio de sesión más a la derecha o a la izquierda
+        if(navigator.userAgent.indexOf('Android') != -1){
+            cuadroIniciaSesion.setAttribute('style', 'left: ' + (widthVentana - 253) + 'px;');
+        }else if(navigator.userAgent.indexOf('Windows') != -1){
             cuadroIniciaSesion.setAttribute('style', 'left: ' + (widthVentana - 269) + 'px;');
+        }else if(navigator.userAgent.indexOf('Linux') != -1){
+            if(navigator.userAgent.indexOf('Firefox') != -1){
+                cuadroIniciaSesion.setAttribute('style', 'left: ' + (widthVentana - 253) + 'px;');
+            }else{
+                cuadroIniciaSesion.setAttribute('style', 'left: ' + (widthVentana - 269) + 'px;');
+            }
         }else{
             cuadroIniciaSesion.setAttribute('style', 'left: ' + (widthVentana - 253) + 'px;');
         }
@@ -104,11 +111,18 @@ function posicionaYMuestraCuadroIniciaSesion(widthVentana, cuadroIniciaSesion){
     //      ventana un poco más a la derecha
     if(document.querySelector('body').clientHeight > window.innerHeight){
 
-	// Dependiendo de si se esta usando un navegador en un Windows o Linux, sin ser Firefox en este último caso, 
-        //      o en otro sistema operativo o navegador, se desplaza la ventana un poco más a la izquierda o un poco menos
-        if(navigator.userAgent.indexOf('Windows') != -1 || (navigator.userAgent.indexOf('Linux') != -1 && 
-            navigator.userAgent.indexOf('Firefox') == -1)){
+        // Dependiendo de en que sistema se este mostrando la página, y, en determinados casos, también en función del navegador,
+        //      posicionamos el cuadro de inicio de sesión más a la derecha o a la izquierda
+        if(navigator.userAgent.indexOf('Android') != -1){
+            cuadroIniciaSesion.setAttribute('style', 'display: flex; left: ' + (widthVentana - 253) + 'px;');
+        }else if(navigator.userAgent.indexOf('Windows') != -1){
             cuadroIniciaSesion.setAttribute('style', 'display: flex; left: ' + (widthVentana - 269) + 'px;');
+        }else if(navigator.userAgent.indexOf('Linux') != -1){
+            if(navigator.userAgent.indexOf('Firefox') != -1){
+                cuadroIniciaSesion.setAttribute('style', 'display: flex; left: ' + (widthVentana - 253) + 'px;');
+            }else{
+                cuadroIniciaSesion.setAttribute('style', 'display: flex; left: ' + (widthVentana - 269) + 'px;');
+            }
         }else{
             cuadroIniciaSesion.setAttribute('style', 'display: flex; left: ' + (widthVentana - 253) + 'px;');
         }

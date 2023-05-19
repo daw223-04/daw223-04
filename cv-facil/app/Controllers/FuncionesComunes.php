@@ -373,7 +373,7 @@ abstract class FuncionesComunes extends BaseController
         $dompdf->render();
 
         // Descargamos el currículum con el nombre recibido por parámetro
-        $dompdf->stream($data['nombreCurriculum'].'.pdf', [ "Attachment" => true]);
+        $dompdf->stream($data['nombreCurriculum'].'.pdf');
     }
 
     ////////////////////

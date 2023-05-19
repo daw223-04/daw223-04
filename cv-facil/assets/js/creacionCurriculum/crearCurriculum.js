@@ -193,7 +193,7 @@ function muestraOcultaCuadroAnadir(cadenaPrincipal){
             cadenaPrincipal.toLowerCase();
 
         // Ocultamos los botones de modificación y borrado de datos
-        document.querySelectorAll(cadenaPrincipal.toLowerCase() + 'Anadido > article:last-child').forEach(e => 
+        document.querySelectorAll('.' + cadenaPrincipal.toLowerCase() + 'Anadido > article:last-child').forEach(e => 
             e.setAttribute('style', 'display: none;'));
 
         // Aplicamos el texto de la cabecera del cuadro de añadir y del botón de añadir
@@ -724,6 +724,10 @@ function gestionaModificacionDato(e, cadenaPrincipal){
     // Ocultamos el enlace para añadir nuevos datos
     document.querySelector('#enlaceAnadir' + cadenaPrincipal).setAttribute('style', 'display: none;');
 
+    // Ocultamos los botones de modificación y borrado de datos del resto de artículos de la sección
+    document.querySelectorAll('.' + cadenaPrincipal.toLowerCase() + 'Anadido > article:last-child').forEach(e => 
+        e.setAttribute('style', 'display: none;'));
+
 }
 
 /**
@@ -790,7 +794,7 @@ function reseteaCamposOcultacionCuadroAnadir(cadenaPrincipal){
     document.querySelector('#enlaceAnadir' + cadenaPrincipal).textContent = '+ Agregar ' + cadenaPrincipal.toLowerCase();
 
     // Volvemos a poner visibles los botones de modificación y borrado de datos
-    document.querySelectorAll(cadenaPrincipal.toLowerCase() + 'Anadido > article:last-child').forEach(e => e.removeAttribute('style'));
+    document.querySelectorAll('.' + cadenaPrincipal.toLowerCase() + 'Anadido > article:last-child').forEach(e => e.removeAttribute('style'));
 }
 
 /**
@@ -1096,7 +1100,7 @@ function compruebaInputsFormularioYDatosNoPersonales(e, estudiosAnadidos, experi
         // Teléfono con patrón incorrecto
         muestraVentanaModalParrafoYBoton('El teléfono no tiene un formato válido.', 'Volver');
         bandera = false;
-    }else if(!/^(C\/|Avda\.|Plaza)\s(((de(\s(la|las|los))?\s|del\s|los\s|las\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}º\s[A-Z])?$/.test
+    }else if(!/^(C\/|Avda\.|Plaza)\s(((de(\s(la|las|los))?\s|del\s|los\s|las\s)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{3,})\s?)+,\s\d{1,3}(,\s\d{1,2}(º|°)\s[A-Z])?$/.test
         (e.target['idDireccion'].value)){
         
         // Dirección con patrón incorrecto
