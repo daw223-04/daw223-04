@@ -189,7 +189,7 @@
                 if($palabraPrincipal == 'Datos'){
             ?>
                     <article>
-                        <label for=<?= '"tituloAnade'.$palabraPrincipal.'"' ?>>Indique el dato de interés a añadir:</label>
+                        <label for=<?= '"tituloAnade'.$palabraPrincipal.'"' ?> id=<?='"tituloAnade'.$palabraPrincipal.'"'?>>Indique el dato de interés a añadir:</label>
                         <textarea name=<?= '"tituloAnade'.$palabraPrincipal.'"' ?> id=<?= '"tituloAnade'.$palabraPrincipal.'"' ?> 
                             placeholder=<?='"'.$textoEjemploTitulo.'"'?> pattern="^[A-ZÁÉÍÓÚÑa-záéíóúñ\d\.\s,-]+$"></textarea>
                     </article>
@@ -201,8 +201,8 @@
                         $patronTituloPuesto, $textoEjemploTitulo);
                     generaArticulosIntroduceTituloPuestoCentro($palabraPrincipal, 'centroAnade', '5', '100', 
                         '^(([A-ZÁÉÍÓÚÑ][a-záéíóúñ\.]+\s?)+((de(\sla)?|la|del|en)\s)?)+$', $textoEjemploCentro);
-                    generaArticulosFecha($palabraPrincipal, 'fechaInicioAnade', 'Indique el mes y año de inicio: ');
-                    generaArticulosFecha($palabraPrincipal, 'fechaFinAnade', 'Indique el mes y año de fin: ');
+                    generaArticulosFecha($palabraPrincipal, 'fechaInicioAnade', 'Indique la fecha de inicio: ');
+                    generaArticulosFecha($palabraPrincipal, 'fechaFinAnade', 'Indique la fecha de fin: ');
                 }
             ?>
             <article class="articuloBotonesCuadroAnadir">

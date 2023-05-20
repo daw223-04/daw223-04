@@ -202,12 +202,12 @@ main > p{
 
 /*Estilos aplicados a los artículos de titulo/puesto, centro y fecha de inicio de los cuadros de añadir*/
 .filaDosDatosCuadroAnadir{
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 230px 1fr;
 }
 
 /*Estilos aplicados al artículo de fecha de fin de los cuadros de añadir*/
 .filaTresDatosCuadroAnadir{
-    grid-template-columns: 240px 1fr 130px;
+    grid-template-columns: 230px 1fr 130px;
 }
 
 /*Estilos aplicados al botón de 'Añádir' de los cuadros de añadir*/
