@@ -32,18 +32,11 @@
 	<ul>
 		<li>~$ sudo apt-get remove docker docker-engine docker.io containerd runc</li>
 		<li>~$ sudo apt-get update</li>
-		<li>~$ sudo apt-get install \
-                	ca-certificates \
-                	curl \
-                	gnupg
+		<li>~$ sudo apt-get install ca-certificates curl gnupg
 		</li>
 		<li>~$ sudo mkdir -m 0755 -p /etc/apt/keyrings</li>
 		<li>~$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</li>
-		<li>~$ echo \
-                	"deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-                	"$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-                	sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-		</li>
+		<li>~$ echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</li>
 		<li>~$ sudo apt-get update</li>
 		<li>~$ sudo apt-get install docker-ce=5:20.10.19~3-0~debian-bullseye docker-ce-cli=5:20.10.19~3-0~debian-bullseye containerd.io docker-buildx-plugin docker-compose-plugin</li>
 		<li>~$ sudo docker run hello-world <---- Este último comando es para probar que la instalación se ha hecho correctamente.</li>
@@ -62,18 +55,21 @@
 
 <h3>Anexo III: Clonado del repositorio de GitHub</h3>
 
-<p>Tras instalar y configurar Docker y GIt, se debe clonar el repositorio en el servidor, usando el siguiente comando en la consola de Git:</p>
+<p>Tras instalar y configurar Docker y Git, se debe clonar el repositorio en el servidor, usando el siguiente comando en la consola de Git:</p>
 <ul>
-	<li>~$ git clone https://github.com/daw223_04/daw223-04.git</li>
+	<li>~$ git clone https://github.com/daw223-04/daw223-04.git</li>
 </ul>
 
 <h3>Anexo IV: Aplicación de las variables de entorno correctas</h3>
 
-<p>Una vez se tenga el repositorio clonado, se debe modificar una variable de entorno, la cual esta puesta en el fichero variables_servidor_web.env con el nombre de ip_pub, y que permite indicar, al código de la aplicación, cual es la dirección IP del servidor donde se lanza:</p>
+<p>Una vez se tenga el repositorio clonado, se debe modificar una variable de entorno, la cual esta puesta en el fichero variables_servidor_web.env con el nombre de ip_pub, y que permite indicar, al código de la aplicación, cual es la dirección IP del servidor donde se lanza.</p>
+<p>Entonces, los pasos para cambiar dicha variable son:</p>
 <ul>
-	<li>ip_pub=IP <---- Se define una variable de entorno ip_pub, la cual tendrá el valor de IP</li>
+	<li>~$ nano daw223-04/variables_servidor_web.env</li>
+	<li>ip_pub=IP <---- Se cambia el valor de la variable ip_pub, para que esta posea el valor que indiquemos donde pone IP.</li>
+	<li>Guardamos los cambios hechos</li>
 </ul>
-<p>Entonces, lo que se debe hacer es cambiar el valor de la variable ip_pub por la dirección IP del servidor donde se crearán los contenedores.</p>
+<p>Con esto, ya se tendrá correctamente configurada la variable de entorno necesaria para el contenedor del servidor web.</p>
 
 <h3>Anexo V: Creación de los contenedores</h3>
 

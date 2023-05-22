@@ -82,12 +82,16 @@ class CreacionCurriculumsModel extends Model{
             'extension_foto' => $extensionFoto,
         );
 
-        // Comprobamos si se ha pasado un whatsapp o linkedin para meterlos al array
+        // Comprobamos si se ha pasado un whatsapp o linkedin para meterlos al array, o meter un valor nulo
         if($whatsapp != ''){
             $data['whatsapp'] = $whatsapp;
+        }else{
+            $data['whatsapp'] = null;
         }
         if($linkedin != ''){
             $data['linkedin'] = $linkedin;
+        }else{
+            $data['linkedin'] = null;
         }
 
         // Consultamos a la BD si hay un dato personal con los datos que se desean insertar

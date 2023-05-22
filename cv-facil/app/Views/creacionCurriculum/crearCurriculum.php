@@ -189,7 +189,7 @@
                 if($palabraPrincipal == 'Datos'){
             ?>
                     <article>
-                        <label for=<?= '"tituloAnade'.$palabraPrincipal.'"' ?> id=<?='"tituloAnade'.$palabraPrincipal.'"'?>>Indique el dato de interés a añadir:</label>
+                        <label for=<?= '"tituloAnade'.$palabraPrincipal.'"' ?> id=<?='"labelAnade'.$palabraPrincipal.'"'?>>Indique el dato de interés a añadir:</label>
                         <textarea name=<?= '"tituloAnade'.$palabraPrincipal.'"' ?> id=<?= '"tituloAnade'.$palabraPrincipal.'"' ?> 
                             placeholder=<?='"'.$textoEjemploTitulo.'"'?> pattern="^[A-ZÁÉÍÓÚÑa-záéíóúñ\d\.\s,-]+$"></textarea>
                     </article>
