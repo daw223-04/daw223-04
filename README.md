@@ -64,7 +64,7 @@
 
 <p>Una vez se tenga el repositorio clonado, se debe modificar una variable de entorno, la cual esta puesta en el fichero variables_servidor_web.env con el nombre de ip_pub, y que permite indicar, al código de la aplicación, cual es la dirección IP del servidor donde se lanza.</p>
 <p>Por defecto, al clonar el repositorio, esta variable vendrá indicada en el fichero con el valor localhost, permitiendo lanzar los contenedores de forma local sin necesidad de hacer ningún cambio en este fichero.</p>
-<p>Entonces, los pasos para cambiar dicha variable, si es necesario, son:</p>
+<p>Dicho esto, los pasos para cambiar dicha variable, si es necesario, son:</p>
 <ul>
 	<li>~$ nano daw223-04/variables_servidor_web.env</li>
 	<li>ip_pub=IP <---- Se cambia el valor de la variable ip_pub, para que esta posea el valor que indiquemos donde pone IP.</li>
