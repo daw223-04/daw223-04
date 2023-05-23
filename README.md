@@ -30,10 +30,9 @@
 <ul>
 	<li>Docker, con docker-compose habilitado. A continuación, se muestran los comandos para la instalación de ambos en Debian 11.5:
 	<ul>
-		<li>~$ sudo apt-get remove docker docker-engine docker.io containerd runc</li>
+		<li>~$ sudo apt-get remove docker docker-engine docker.io containerd runc <---- Este comando permite borrar versiones antiguas de Docker, por si tenemos alguna instalada.</li>
 		<li>~$ sudo apt-get update</li>
-		<li>~$ sudo apt-get install ca-certificates curl gnupg
-		</li>
+		<li>~$ sudo apt-get install ca-certificates curl gnupg</li>
 		<li>~$ sudo mkdir -m 0755 -p /etc/apt/keyrings</li>
 		<li>~$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</li>
 		<li>~$ echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</li>
@@ -55,10 +54,11 @@
 
 <h3>3. Clonado del repositorio de GitHub</h3>
 
-<p>Tras instalar y configurar Docker y Git, se debe clonar el repositorio en el servidor, usando el siguiente comando en la consola de Git:</p>
+<p>Tras instalar y configurar Docker y Git, se debe clonar el repositorio en el servidor, usando el siguiente comando:</p>
 <ul>
 	<li>~$ git clone https://github.com/daw223-04/daw223-04.git</li>
 </ul>
+<p>Con esto, se nos creará una carpeta en la ruta donde hemos ejecutado el comando, llamada daw223-04, la cual contiene todo lo necesario para desplegar el proyecto.</p>
 
 <h3>4. Aplicación de las variables de entorno correctas</h3>
 
@@ -93,12 +93,12 @@
 
 <p>Una vez se haya acabado la creación de los contenedores, se podrá acceder a la siguiente ruta via web para usar la aplicación:</p>
 <ul>
-	<li>http://IP</li>
+	<li>http://IP <---- IP hace referencia al valor que se haya indicado en el fichero variables_servidor_web.env para la variable ip_pub.</li>
 </ul>
 
 <p>Así mismo, también se podrá acceder a un gestor gráfico de la B.D., por si se necesita hacer alguna operación en ella. La ruta de acceso y credenciales son:</p>
 <ul>
-	<li>http://IP:8080</li>
+	<li>http://IP:8080 <---- IP hace referencia al valor que se haya indicado en el fichero variables_servidor_web.env para la variable ip_pub.</li>
 	<li>Usuario: root</li>
 	<li>Contraseña: admin</li>
 </ul>
