@@ -62,7 +62,7 @@
 
 <h3>4. Aplicación de las variables de entorno correctas</h3>
 
-<p>Una vez se tenga el repositorio clonado, se debe modificar una variable de entorno, la cual esta puesta en el fichero variables_servidor_web.env con el nombre de ip_pub, y que permite indicar, al código de la aplicación, cual es la dirección IP del servidor donde se lanza.</p>
+<p>Una vez se tenga el repositorio clonado, se debe modificar una variable de entorno, la cual esta puesta en el fichero variables_servidor_web.env con el nombre de ip_pub, y que permite indicar, al código de la aplicación, cual es la dirección IP del servidor donde se lanza. Por defecto, al clonar el repositorio esta variable vendrá indicada en el fichero con el valor localhost, para permitir lanzar los contenedores de forma local.</p>
 <p>Entonces, los pasos para cambiar dicha variable son:</p>
 <ul>
 	<li>~$ nano daw223-04/variables_servidor_web.env</li>
@@ -81,8 +81,8 @@
 </ul>
 <p>Una vez dentro, deberemos ejecutar uno de los siguientes comandos:</p>
 <ul>
-	<li>~$ docker compose up -d</li>
-	<li>~$ docker-compose up -d</li>
+	<li>~/daw223-04$ docker compose up -d</li>
+	<li>~/daw223-04$ docker-compose up -d</li>
 </ul>
 
 <p>Ambos comandos son muy parecidos, diferenciandose en tener un guión o un espacio entre las palabras docker y compose, pero, dependiendo de la versión que se instale de Docker, funcionará uno u otro comando. Por eso, se indican ambas posibilidades.</p>

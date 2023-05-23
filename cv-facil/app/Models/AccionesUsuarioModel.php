@@ -157,7 +157,7 @@ class AccionesUsuarioModel extends Model{
      *      la parte final de esta ('_cur').
      * @param string $select Campos, separados por comas, que se desean obtener de la tabla.
      * @param string $tipoDato Tipo de dato que se desea obtener de la BD. Se utiliza en la tabla de 'est_exp_idi'.
-     *      Si no se quiere obtener ningún tipo de dato concreto, se puede pasar una cadena vacía
+     *      Si no se quiere obtener ningún tipo de dato concreto, se puede pasar una cadena vacía.
      * @return array Array con los datos de la BD.
      * @since 1.0
      * @access public

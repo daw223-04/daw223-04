@@ -220,13 +220,13 @@ class CreacionCurriculumsModel extends Model{
      * Método que permite actualizar los datos de un currículum.
      * @param integer $idCurriculum Id del currículum a actualizar.
      * @param string $nombreCurriculum Nombre nuevo del currículum.
-     * @param string $fechaRealización Fecha de realización de la modificación del currículum.
+     * @param string $fechaRealizacion Fecha de realización de la modificación del currículum.
      * @param string $elemento1 Clave nueva del 1º elemento que aparecerá en el currículum.
      * @param string $elemento2 Clave mueva del 2º elemento que aparecerá en el currículum.
      * @param string $elemento3 Clave nueva del 3º elemento que aparecerá en el currículum.
      * @param string $elemento4 Clave nueva del 4º elemento que aparecerá en el currículum.
      * @param string $cronologia Clave nueva que identifica la cronología de los elementos del currículum.
-     * @param integer $dato Id del dato personal nuevo que esta relacionado con el currículum.
+     * @param integer $idDatoPersonal Id del dato personal nuevo que esta relacionado con el currículum.
      * @throws \CodeIgniter\Database\Exceptions\DatabaseException
      * @since 1.0
      * @access public
